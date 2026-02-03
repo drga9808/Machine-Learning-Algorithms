@@ -39,26 +39,26 @@ If $|W_new − W| < ε$, stop.
 
 ## 📷 Visual Results
 ### 👉 Elbow Method
-Used to determine an optimal number of clusters by comparing distortion values.
-images/Elbow\ method.png
+Used to determine an optimal number of clusters by comparing distortion values.  
+![Elbow Method](images/Elbow%20method.png)
 
 ### 👉 Silhouette Plot
-Visualizes cohesion & separation between clusters.
-images/silhouette\ plot.png
-
+Visualizes cohesion & separation between clusters.  
+![Silhouette Plot](images/silhouette%20plot.png)
+  
 ### 👉 Jm Objective Function Across Iterations
-Used to analyze the convergence of Soft C-Means.
-images/Jm\ Change\ through\ Iterations.png
+Used to analyze the convergence of Soft C-Means.  
+![Jm Objective Function](images/Jm%20Change%20through%20Iterations.png)
 
 ### 👉 Final Clustering Results
-Displays the final centroids and cluster assignments.
-images/Clusters.png
+Displays the final centroids and cluster assignments.  
+![Final Cluster Results](images/Clusters.png)
 
 ### 👉 First Iteration (Initial Centroids)
-images/First\ iteration.png
+![Initial Centroids](images/First%20iteration.png)
 
 ### 👉 Last Iteration (Converged Centroids)
-images/Last\ iteration.png
+![Converged Centroids](images/Last%20iteration.png)
 
 ## 🧪 Parameters You Can Adjust
 ```
@@ -110,10 +110,10 @@ Ensures algorithm converges properly.
 - Add animation of centroid movement across iterations
 
 ## 📄 License
-MIT License
+MIT License  
 Feel free to use, modify, and reference this work with attribution.
 
 ## 👤 Author
-Daniel Garcia
-Developer & Machine Learning Enthusiast
+Daniel Garcia  
+Developer & Machine Learning Enthusiast  
 GitHub: https://github.com/drga9808
