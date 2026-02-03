@@ -1,119 +1,68 @@
-# 📌 Soft C-Means (Fuzzy C-Means) Clustering — From Scratch
+# 📘 Machine Learning Algorithms — From Scratch
+A collection of machine learning algorithms implemented from scratch using Python and NumPy.
+Each algorithm is organized in its own folder and includes:
 
-### Machine Learning Algorithms — Custom Implementation in Python
-This project is part of the Machine-Learning-Algorithms repository and provides a complete from-scratch implementation of the Soft C-Means (Fuzzy C-Means) algorithm using Python and NumPy.
-All computations — including membership updates, centroid updates, and convergence checks — are written manually without ML libraries.
-The project also includes clustering visualizations, evaluation metrics, and iterative tracking of the objective function.
+- 📓 A clear & well‑documented Jupyter Notebook
+- 🧠 Full mathematical explanation & formulas
+- 🧮 Manual algorithm implementation (no high‑level ML libraries)
+- 📊 Visualizations and evaluation metrics
+- 📁 A dedicated README for each algorithm
+- 🔧 A requirements.txt for reproducibility
 
+## 🎯 Purpose of This Repository
 
-## 🚀 Project Highlights
-- 🔢 Implements Soft (Fuzzy) C-Means from scratch
-- 🎛 Fully parameterized (clusters k, fuzziness m, max iterations, tolerance, etc.)
-- 📉 Tracks Jm objective function across iterations
-- 🎨 Plots cluster formation, first and last iteration centroids
-- 📊 Includes Elbow method and Silhouette coefficient for cluster quality evaluation
-- 🧪 Implemented in a clear Jupyter Notebook, ideal for learning or demonstration
+This repo serves as:
+- A learning resource for anyone wanting to understand ML fundamentals
+- A demonstration of algorithmic knowledge for recruiters and hiring managers
+- A portfolio of clean, well‑written implementations
+- A stepping stone toward building more advanced ML systems 📊 Includes Elbow method and Silhouette coefficient for cluster quality evaluation
 
-## 🧠 What is Soft C-Means?
-Soft C-Means (also known as Fuzzy C-Means) is a clustering algorithm where each data point belongs to every cluster with a certain membership degree, rather than being assigned to only one cluster (as in K-Means).
-This is especially useful when cluster boundaries are ambiguous.
-The goal is to minimize the objective function:  
-<p align="center">
-$J_m = \sum_{i=1}^{N} \sum_{j=1}^{k} (w_{ij})^m \cdot ||x_i - c_j||$.
-</p>
+## 🧠 Algorithms Implemented
+Below is the list of algorithms included:
 
-## ⚙️ Algorithm Steps
-1. Initialize membership matrix randomly (W), normalized per point.
-2. Compute centroids using fuzzy weights.
-3. Update membership coefficients using relative distance ratios.
-4. Check convergence:  
-If $|W_new − W| < ε$, stop.
-5. Record objective value Jm at every iteration.
-6. Visualize results — cluster assignments, centroids, and convergence curve.
+### ✔ Soft C-Means (Fuzzy C-Means)
+Folder: /Soft-C-Means/
+A fully manual implementation including:
+- Fuzzy membership updates
+- Centroid updates
+- Objective function tracking
+- Visualizations (cluster plots, silhouette, elbow method)
 
-## 🛠 Technologies Used
-- Python 3.8+
-- NumPy
-- Matplotlib
-- Scikit-learn (for Silhouette evaluation)
-
-## 📷 Visual Results
-### 👉 Elbow Method
-Used to determine an optimal number of clusters by comparing distortion values.
-images/Elbow\ method.png
-
-### 👉 Silhouette Plot
-Visualizes cohesion & separation between clusters.
-images/silhouette\ plot.png
-
-### 👉 Jm Objective Function Across Iterations
-Used to analyze the convergence of Soft C-Means.
-images/Jm\ Change\ through\ Iterations.png
-
-### 👉 Final Clustering Results
-Displays the final centroids and cluster assignments.
-images/Clusters.png
-
-### 👉 First Iteration (Initial Centroids)
-images/First\ iteration.png
-
-### 👉 Last Iteration (Converged Centroids)
-images/Last\ iteration.png
-
-## 🧪 Parameters You Can Adjust
-```
-k = 4        # number of clusters
-m = 2        # fuzziness coefficient (>1)
-n = 50       # number of samples
-d = 2        # number of dimensions
-e = 1e-4     # tolerance for convergence
-max_iter = 300
-```
-
-## ▶️ How to Run
-Clone the repo:
+## ▶️ Running Any Algorithm
+1. Clone the repository:
 ```
 git clone https://github.com/drga9808/Machine-Learning-Algorithms.git
 cd Machine-Learning-Algorithms
 ```
-Install dependencies:
+2. Navigate to the algorithm folder you want:
 ```
-pip install numpy matplotlib scikit-learn
+cd Soft-C-Means
 ```
-Open the notebook:
+3. Install dependencies:
 ```
-jupyter notebook soft_cmeans.ipynb
+pip install -r requirements.txt
 ```
-Run all cells to reproduce clustering and visualizations.
+4. Start Jupyter:
+```
+jupyter notebook
+```
+5. Open the notebook and run all cells.
 
-## 📊 Evaluation Methods Included
-### 1. Elbow Method
-Evaluates distortion to suggest an optimal number of clusters.
+## 🌟 Why This Repo Is Valuable
+This repository demonstrates:
+- Strong understanding of mathematics behind ML algorithms
+- Ability to write clean, modular, well‑commented code
+- Skills in data visualization and evaluation
+- Experience in structuring projects professionally
+- A real portfolio of end‑to‑end ML implementations
 
-### 2. Silhouette Score
-Measures how similar each point is to its own cluster compared to others.
-
-### 3. Jm Objective Function Tracking
-Ensures algorithm converges properly.
-
-## 🔍 Observations from Results
-- Jm curve stabilizes → algorithm converged successfully
-- Silhouette plot indicates cluster separation quality
-- Final centroids visually align with underlying data clusters
-- Elbow method shows diminishing returns around k=4
-
-## 📌 Potential Improvements
-- Add support for real-world datasets
-- Vectorize loops for faster computation
-- Add noise-handling or outlier detection
-- Convert implementation into a reusable module/class
-- Add animation of centroid movement across iterations
+It shows both theory and practice, which is exactly what recruiters look for.
 
 ## 📄 License
-MIT License
+MIT License  
 Feel free to use, modify, and reference this work with attribution.
 
 ## 👤 Author
-Daniel Garcia
-Developer & Machine Learning Enthusiast
+Daniel Garcia  
+Developer & Machine Learning Enthusiast  
 GitHub: https://github.com/drga9808
